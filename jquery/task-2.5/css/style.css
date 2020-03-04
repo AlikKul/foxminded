@@ -1,0 +1,80 @@
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.task1 {
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.task1 .rainbow-item {
+  height: 50px;
+}
+
+.task1 .green {
+  background: #008000;
+}
+
+.task1 .blue {
+  background: #0000FF;
+}
+
+.task1 .dark-yellow {
+  background: #FFA500;
+}
+
+.task1 .pink {
+  background: #EE82EE;
+}
+
+.task1 .yellow {
+  background: #FFFF00;
+}
+
+.task1 .red {
+  background: #FF0000;
+}
+
+.task1 .violet {
+  background: #4B0082;
+}
+
+#photo-grid img {
+  width: 100px;
+  cursor: move;
+}
+
+.trash {
+  padding: 10px 10px;
+  border: 1px solid white;
+  margin-bottom: 10px;
+  width: 220px;
+  height: 100px;
+  position: relative;
+}
+
+.highlight {
+  border: 1px dashed #b5c051;
+}
+
+.highlight-accept {
+  background: #d9dfa4;
+}
+
+.trash-animation {
+  display: none;
+  position: absolute;
+  width: 128px;
+  height: 124px;
+  background: url("../epuff.png") 0 top;
+  -webkit-transition: background 0.4s steps(4, end);
+  transition: background 0.4s steps(4, end);
+}
+
+.animate {
+  background-position: 0 bottom;
+}
+/*# sourceMappingURL=style.css.map */

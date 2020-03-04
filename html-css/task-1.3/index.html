@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+	
+        <input type="radio" id="i1" name="images" checked/>
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+        
+        <div class="slide_img" id="one">			
+            <img src="img/01.jpg">
+            <label class="prev" for="i3"><span></span></label>
+            <label class="next" for="i2"><span></span></label>	
+        </div>
+        
+        <div class="slide_img" id="two">
+            <img src="img/02.jpg" >
+            <label class="prev" for="i1"><span></span></label>
+            <label class="next" for="i3"><span></span></label>
+        </div>
+                
+        <div class="slide_img" id="three">
+            <img src="img/03.jpg">	
+            <label class="prev" for="i2"><span></span></label>
+            <label class="next" for="i1"><span></span></label>
+        </div>
+    
+        <div id="nav_slide">
+            <label class="dots" for="i1" id="dot1"></label>
+            <label class="dots" for="i2" id="dot2"></label>
+            <label class="dots" for="i3" id="dot3"></label>
+        </div>
+            
+    </div>
+</body>
+</html>

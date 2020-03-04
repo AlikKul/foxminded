@@ -1,0 +1,26 @@
+.feedback-form {
+
+    .input {
+        width: 100%;
+        font-size: 22px;
+        padding: 5px;
+    }
+
+    .send-btn {
+        width: fit-content;
+        font-size: 22px;
+        padding: 5px;
+    }
+
+    .thank-you {
+        display: none;
+        font-size: 22px;
+        color: red;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+}

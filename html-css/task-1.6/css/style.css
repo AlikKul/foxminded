@@ -1,0 +1,81 @@
+.section-tasks {
+  margin: 0 auto;
+  border: 1px solid #D0D0D0;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.section-tasks__title {
+  color: #5F6B78;
+  font-size: 26px;
+  padding: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), to(#E5E5E5));
+  background: linear-gradient(to bottom, #FBFBFB, #E5E5E5);
+}
+
+.section-tasks__task {
+  color: #8A999A;
+  font-size: 20px;
+  padding: 10px;
+  border-top: 1px solid #F7F8F9;
+}
+
+.section-tasks__task .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-tasks__task .label .text {
+  margin-left: 5px;
+}
+
+.section-tasks__task .label .control-checkbox {
+  display: none;
+}
+
+.section-tasks__task .label .styled-ckeckbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #8A999A;
+  border-radius: 20px;
+  position: relative;
+}
+
+.section-tasks__task .label .styled-ckeckbox::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  display: block;
+  width: 5px;
+  height: 10px;
+  border-bottom: 5px solid #3CC070;
+  border-right: 5px solid #3CC070;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.section-tasks__task .label .control-checkbox:checked + .styled-ckeckbox::before {
+  opacity: 1;
+}
+
+.section-tasks__task .label .control-checkbox:checked + .styled-ckeckbox {
+  border: 2px solid #3CC070;
+}
+
+.section-tasks__task .label .control-checkbox:checked ~ .text {
+  color: #3CC070;
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=style.css.map */

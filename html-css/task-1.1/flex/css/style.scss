@@ -1,0 +1,66 @@
+@import 'normalize.scss';
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.section-header {
+    color: white;
+    background-color: #336697;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-content {
+    display: flex;
+    flex-grow: 1;
+
+    &-navigation {
+        width: 400px;
+        background-color: #FE9900;
+        
+        @media (max-width: 768px) {
+            width: auto;
+            height: 80px;
+        }
+    }
+
+    &-main {
+        @media (max-width: 768px) {
+            flex-grow: 1;
+        }
+    }
+
+    &-links {
+        width: 400px;
+        background-color: #993365;
+
+        @media (max-width: 768px) {
+            width: auto;
+            height: 80px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.section-footer {
+    color: white;
+    background-color: #669900;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

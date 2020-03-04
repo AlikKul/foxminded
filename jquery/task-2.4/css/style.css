@@ -1,0 +1,39 @@
+.section-reservation-form {
+  width: 620px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+}
+
+.section-reservation-form .date, .section-reservation-form .airport {
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  color: #1C94C4;
+  padding: 5px;
+}
+
+.section-reservation-form__airport, .section-reservation-form__meal-options, .section-reservation-form__bags, .section-reservation-form__type-of-seat, .section-reservation-form .submit {
+  margin-top: 10px;
+}
+
+.section-reservation-form__date label:first-child {
+  margin-right: 25px;
+}
+
+.section-reservation-form__airport label:first-child {
+  margin-right: 78px;
+}
+
+.section-reservation-form__meal-options label:first-child {
+  margin-right: 96px;
+}
+
+.section-reservation-form__type-of-seat label:first-child {
+  margin-right: 20px;
+}
+
+.section-reservation-form .submit {
+  margin-left: 200px;
+}
+/*# sourceMappingURL=style.css.map */

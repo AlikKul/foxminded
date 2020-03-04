@@ -1,0 +1,78 @@
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.task1 {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px solid red;
+
+    .rainbow-item {
+        height: 50px;
+    }
+
+    .green {
+        background: #008000;
+    }
+    
+    .blue {
+        background: #0000FF;
+    }
+    
+    .dark-yellow {
+        background: #FFA500;
+    }
+
+    .pink {
+        background: #EE82EE;
+    }
+
+    .yellow {
+        background: #FFFF00;
+    }
+
+    .red {
+        background: #FF0000;
+    }
+
+    .violet {
+        background: #4B0082;
+    }
+}
+
+#photo-grid img {
+    width: 100px;
+    cursor: move;
+}
+  
+.trash {
+    padding: 10px 10px;
+    border: 1px solid white;
+    margin-bottom: 10px;
+    width: 220px;
+    height: 100px;
+    position: relative;
+}
+
+.highlight {
+    border: 1px dashed #b5c051;
+}
+
+.highlight-accept {
+    background: #d9dfa4; 
+}
+
+.trash-animation { 
+    display: none;
+    position: absolute;
+    width: 128px; 
+    height: 124px; 
+    background: url("../epuff.png") 0 top;
+    transition: background .4s steps(4, end);
+}
+    
+.animate { 
+    background-position: 0 bottom; 
+} 

@@ -1,0 +1,364 @@
+@import 'normalize.scss';
+
+//=== Variables ===
+$color-white: #ffffff;
+$color-top-deal: #ff6666;
+$color-product-card-dark: #FF931D;
+$color-product-card-light: #FFBE17;
+$color-main: #878787;
+//=== /Variables ===
+
+//=== Common ===
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-grow: 1;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
+}
+
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+}
+
+.prev-arrow {
+    left: -40px;
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 15px solid #113463;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    cursor: pointer;
+    background-color: transparent;
+}
+.next-arrow {
+    right: -40px;
+    width: 0;
+    height: 0;
+    border-right: 0 solid transparent;
+    border-left: 15px solid #113463;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    cursor: pointer;
+    background-color: transparent;
+}
+//=== /Common ===
+
+//=== Header ===
+.section-header {
+    background-color: #336697;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//=== /Header ===
+
+//=== Navigation ===
+.section-navigation {
+    width: 300px;
+    background-color: #FE9900;
+
+    ul {
+        list-style: none;
+
+        @media (max-width: 1000px) {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+        li + li {
+            margin-top: 20px;
+
+            @media (max-width: 1000px) {
+                margin-top: 0;
+            }
+        }
+
+        li {
+            a {
+                font-size: 20px;
+                color: black;
+                text-decoration: none;
+            }
+            a:hover {
+                font-weight: bold;
+            }
+        }
+    }
+        
+    @media (max-width: 1000px) {
+        width: auto;
+        height: 80px;
+    }
+}
+//=== /Navigation ===
+
+//=== Products === 
+.section-products {
+    padding-bottom: 50px;
+    margin: 0 auto;
+
+    .products-wrapper {
+        margin-top: 20px;
+        display: flex;
+
+        @media (max-width: 1420px) {
+            flex-direction: column;
+        }
+    }
+
+    &-slider {
+        width: 820px;
+    }
+
+    //=== Top Deal ===
+    .section-top-deal {
+        border: 1px solid $color-top-deal;
+        width: 380px;
+        height: fit-content;
+        padding: 10px;
+        box-shadow: 3px 3px 5px #e9e9e9;
+        cursor: pointer;
+
+        &-picture {
+            &__discount {
+                border-radius: 30px;
+                width: 60px;
+                height: 60px;
+                background-color: $color-top-deal;
+                color: $color-white;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+            }
+
+            &__image {
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &-price {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px dotted $color-main;
+            padding-bottom: 5px;
+
+            &__actual-price {
+                color: $color-top-deal;
+                font-size: 26px;
+            }
+
+            &__price-befor-discount {
+                position: relative;
+                margin-left: 15px;
+            }
+
+            &__price-befor-discount:before {
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                content: '';
+                border-bottom: 2px solid $color-main;
+                transform: rotate(13deg);
+            }
+
+            &__logo {
+                flex-grow: 1;
+                text-align: end;
+            }
+        }
+
+        &-description {
+            margin-top: 15px;
+            width: 50%;
+        }
+
+        &-additional_description {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dotted $color-main;
+            display: flex;
+            
+            &__free, &__new, &__timer {
+                flex-basis: 33%;
+                text-align: center;
+            }
+
+            div + div {
+                border-left: 1px solid $color-main;
+            }
+        }
+    }
+
+    .section-top-deal:hover {
+        box-shadow: 3px 3px 5px #474747;
+
+        .section-top-deal-description {
+            text-decoration: underline;
+        }
+    }
+    //=== /Top Deal ===
+
+    //=== Product Card ===
+    .section-product-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid $color-product-card-dark;
+        width: 380px;
+        height: 202px;
+        padding: 10px;
+        margin-bottom: 40px;
+        margin-left: 40px;
+        box-shadow: 3px 3px 5px #e9e9e9;
+        cursor: pointer;
+
+        @media (max-width: 1420px) {
+            margin-left: 0;
+            margin-bottom: 0;
+            margin-top: 40px;
+        }
+
+        &-description {
+            display: flex;
+            
+            &-discount-and-text {
+                .discount {
+                    border-radius: 30px;
+                    width: 60px;
+                    height: 60px;
+                    background-color: $color-product-card-dark;
+                    color: $color-white;
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .text {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &-price_description {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px dotted $color-main;
+            padding-bottom: 5px;
+
+            &__actual-price {
+                color: $color-top-deal;
+                font-size: 26px;
+            }
+
+            &__price-befor-discount {
+                position: relative;
+                margin-left: 15px;
+            }
+
+            &__price-befor-discount:before {
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                content: '';
+                border-bottom: 2px solid $color-main;
+                transform: rotate(13deg);
+            }
+
+            &__logo {
+                flex-grow: 1;
+                text-align: end;
+            }
+        }
+        
+        &-footer {
+            display: flex;
+
+            div + div {
+                border-left: 1px solid $color-main;
+            }
+            
+            &__new, &__free, &__timer {
+                flex-basis: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .section-product-card:hover {
+        box-shadow: 3px 3px 5px #474747;
+
+        .section-product-card-description-discount-and-text {
+            .text {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .product-cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: min-content;
+        
+        @media (max-width: 1000px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    //=== /Product Card ===
+}
+//=== /Products === 
+
+//=== Links ===
+.section-links {
+    font-size: 16px;
+    width: 300px;
+    background-color: #993365;
+    padding: 20px;
+
+    &-date {
+        margin-top: 20px;
+    }
+
+        @media (max-width: 1000px) {
+            width: auto;
+        }
+}
+//=== /Links ===
+
+//=== Footer ===
+.section-footer {
+    color: white;
+    background-color: #669900;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//=== /Footer ===

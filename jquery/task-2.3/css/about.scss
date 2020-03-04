@@ -1,0 +1,112 @@
+@import 'normalize.scss';
+
+//=== Common ===
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+html {
+    height: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-grow: 1;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
+}
+//=== /Common ===
+
+//=== Header ===
+.section-header {
+    background-color: #336697;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//=== /Header ===
+
+//=== Navigation ===
+.section-navigation {
+    width: 300px;
+    background-color: #FE9900;
+
+    ul {
+        list-style: none;
+
+        @media (max-width: 1000px) {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+        li + li {
+            margin-top: 20px;
+
+            @media (max-width: 1000px) {
+                margin-top: 0;
+            }
+        }
+
+        li {
+            a {
+                font-size: 20px;
+                color: black;
+                text-decoration: none;
+            }
+            a:hover {
+                font-weight: bold;
+            }
+        }
+    }
+        
+    @media (max-width: 1000px) {
+        width: auto;
+        height: 80px;
+    }
+}
+//=== /Navigation ===
+
+//=== Adress === 
+.section-adress {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+}
+//=== /Adress === 
+
+//=== Links ===
+.section-links {
+    width: 300px;
+        background-color: #993365;
+
+        @media (max-width: 1000px) {
+            width: auto;
+            height: 80px;
+        }
+}
+//=== /Links ===
+
+//=== Footer ===
+.section-footer {
+    color: white;
+    background-color: #669900;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+//=== /Footer ===

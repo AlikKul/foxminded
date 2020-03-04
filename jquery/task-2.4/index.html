@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link rel="stylesheet" href="jquery-ui.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<form action="#" class="section-reservation-form ui-widget ui-widget-content">
+        <div class="section-reservation-form__title">One-Way Airlines: Let's make a reservation</div>
+        <hr>
+        <div class="section-reservation-form__date">
+            <label>Pick a departure date</label>
+            <input class="date" type="text">
+        </div>
+        <div class="section-reservation-form__airport">
+            <label>Find an airport</label>
+            <input class="airport" type="text">
+        </div>
+        <div class="section-reservation-form__meal-options">
+            <label>Meal options</label>
+            <select class="meal-options">
+                <option value="1">No meal</option>
+                <option value="2">Breakfast</option>
+                <option value="3">Breakfast and Dinner</option>
+            </select>
+        </div>
+        <div class="section-reservation-form__bags">
+            <label>Number of bags to check</label>            
+            <input class="bags-option" type="radio" name="bags" id="bags0"><label for="bags0">0</label>
+            <input class="bags-option" type="radio" name="bags" id="bags1"><label for="bags1">1</label>
+            <input class="bags-option" type="radio" name="bags" id="bags2"><label for="bags2">2</label>
+        </div>
+        <div class="section-reservation-form__type-of-seat">
+            <label>Type of seat you'd like</label>
+            <input class="seat-option" type="checkbox" name="seat1" id="aisle"><label for="aisle">Aisle</label>
+            <input class="seat-option" type="checkbox" name="seat2" id="window"><label for="window">Window</label>
+            <input class="seat-option" type="checkbox" name="seat3" id="row"><label for="row">Exit Row</label>
+            <input class="seat-option" type="checkbox" name="seat4" id="any"><label for="any">Any seat</label>
+        </div>
+        <button class="submit" type="submit">Continue reservation process <span class="ui-icon ui-icon-circle-arrow-e"></span></button>
+    </form>
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="script/main.js"></script>
+</body>
+</html>
